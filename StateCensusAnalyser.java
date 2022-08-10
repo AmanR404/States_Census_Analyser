@@ -5,7 +5,7 @@ import java.util.Scanner;
 class MyRecordException extends Exception{
    @Override
    public String getMessage() {
-       return "Record is missing...";
+       return "Some Records are missing...";
    }
    @Override
    public String toString() {
@@ -13,8 +13,8 @@ class MyRecordException extends Exception{
    }
 }
 public class StateCensusAnalyser{
+    static int counterRecord = 0;
     public static void main(String[] args) throws FileNotFoundException {
-        int counterRecord = 0;
         try{
             Scanner sc = new Scanner(new File(("statecensusdata.csv")));
             sc.useDelimiter(",");
